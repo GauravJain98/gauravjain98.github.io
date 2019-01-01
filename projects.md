@@ -76,3 +76,23 @@ tagline : "Humanity is overrated."
 		</pre>
 	</div>
 </div>
+
+<div class="row card m-3 bg-dark">
+	<div class="w-100">
+		<p class="lead text-center" id="skills-list"> </p>
+	</div>
+</div>
+<div id="projects" class="row card m-3 bg-dark">
+	<div class="w-100">
+		<p class="topic-header">My Projects</p>
+	</div>
+</div>
+<div class="row card m-3 p-2 bg-dark">
+	<div class="w-100">
+		<div class="lead text-center" id="project-list">
+		</div>
+	</div>
+</div>
+
+
+<script src="/js/main.js">
