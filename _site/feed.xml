@@ -5,9 +5,67 @@
     <description>&lt;h3&gt;Hello, World! I am &lt;/h3&gt;&lt;h1&gt;Everything but looks&lt;/h1&gt;&lt;h3&gt;I'll implement your vision&lt;/h3&gt;and keep you on your toes ;)</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Jan 2019 15:50:30 +0530</pubDate>
-    <lastBuildDate>Tue, 01 Jan 2019 15:50:30 +0530</lastBuildDate>
+    <pubDate>Tue, 01 Jan 2019 21:04:21 +0530</pubDate>
+    <lastBuildDate>Tue, 01 Jan 2019 21:04:21 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Github education pack without a .edu college email</title>
+        <description>&lt;div style=&quot;height:60rem;overflow:hidden;padding:30px;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/github-student-developer-starter.png&quot; alt=&quot;step 1&quot; width=&quot;500rem&quot; /&gt;
+&lt;br /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;GitHub is a website that uses Git version control.&lt;/p&gt;
+
+&lt;p&gt;There are multiple profits but my main usage is for private repositories, needed for making projects code bases that cannot be public or you start learning something that you don’t want to share with the world.&lt;/p&gt;
+
+&lt;p&gt;But it has one problem&lt;/p&gt;
+
+&lt;p&gt;But it’s just $7/month and if you are a student or just started out its a lot of overhead. That’s why Github has a student developer pack!.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center;padding:30px&quot;&gt;
+    &lt;img src=&quot;/assets/github-student-developer-1.png&quot; alt=&quot;step 1&quot; width=&quot;700rem&quot; /&gt;
+Select Accordingly&lt;br /&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Everyone doesn’t have a have an college email so what can we do?&lt;/p&gt;
+
+&lt;p&gt;Select your normal email.&lt;/p&gt;
+
+&lt;p&gt;Get a picture of an academic picture with the date preferred as recent as possible.&lt;/p&gt;
+
+&lt;p&gt;You saw my rejected application that was me using my ID card dated 2016 for my application on 2017.&lt;/p&gt;
+
+&lt;p&gt;So i used my examination admit card. Use any academic document that has a recent date.&lt;/p&gt;
+
+&lt;p&gt;YOU ARE DONE!&lt;/p&gt;
+
+&lt;p&gt;Books to read:&lt;/p&gt;
+
+&lt;p&gt;Introducing GitHub: A Non-Technical Guide by O’Reilly Media&lt;/p&gt;
+
+&lt;p&gt;My Laptop: ASUS GL552VW&lt;/p&gt;
+</description>
+        <pubDate>Sat, 22 Dec 2018 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/github/2018/12/22/welcome-to-jekyll11.html</link>
+        <guid isPermaLink="true">http://localhost:4000/github/2018/12/22/welcome-to-jekyll11.html</guid>
+        
+        <category>community</category>
+        
+        <category>github</category>
+        
+        <category>student</category>
+        
+        <category>education</category>
+        
+        <category>programming</category>
+        
+        
+        <category>github</category>
+        
+      </item>
     
       <item>
         <title>Easier blogging website</title>
@@ -23,8 +81,8 @@
 
 &lt;p&gt;You can edit everything from creating &lt;a href=&quot;https://github.com/yabwe/medium-editor/blob/9156a11407451c0ee2e30d971798d6476de4d354/src/js/extensions/WALKTHROUGH-BUTTON.md&quot;&gt;custom buttons&lt;/a&gt; to the color of the buttons.&lt;/p&gt;
 
-&lt;div style=&quot;text-align:center&quot;&gt;
-    &lt;img src=&quot;/assets/medium.png&quot; alt=&quot;drawing&quot; width=&quot;700rem&quot; /&gt;
+&lt;div style=&quot;text-align:center;padding:30px&quot;&gt;
+    &lt;img src=&quot;/assets/medium.png&quot; alt=&quot;medium-test&quot; width=&quot;700rem&quot; /&gt;
 &lt;/div&gt;
 
 &lt;h2 id=&quot;plug-ins&quot;&gt;Plug-Ins&lt;/h2&gt;
@@ -96,34 +154,6 @@
         <pubDate>Thu, 12 May 2016 22:01:43 +0530</pubDate>
         <link>http://localhost:4000/jekyll/update/2016/05/12/welcome-to-jekyll2.html</link>
         <guid isPermaLink="true">http://localhost:4000/jekyll/update/2016/05/12/welcome-to-jekyll2.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>Ya I know you loved this theme!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 12 May 2016 22:01:43 +0530</pubDate>
-        <link>http://localhost:4000/jekyll/update/2016/05/12/welcome-to-jekyll11.html</link>
-        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2016/05/12/welcome-to-jekyll11.html</guid>
         
         
         <category>jekyll</category>

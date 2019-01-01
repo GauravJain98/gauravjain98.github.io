@@ -1,25 +1,45 @@
 ---
 layout: post
-title:  "Ya I know you loved this theme!"
-date:   2016-05-12 22:01:43 +0530
-categories: jekyll update
+title:  "Github education pack without a .edu college email"
+date:   2018-12-22 00:00:00 +0530
+categories: github
+tags: [community,github,student,education,programming]
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+<div style="width:100%" style="height:60rem;overflow:hidden;padding:30px;text-align:center">
+    <img src="/assets/github-student-developer-starter.png" alt="step 1" width="500rem"/>
+<br>
+</div>
 
-Jekyll also offers powerful support for code snippets:
+GitHub is a website that uses Git version control.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+There are multiple profits but my main usage is for private repositories, needed for making projects code bases that cannot be public or you start learning something that you don’t want to share with the world.
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+But it has one problem
 
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+But it’s just $7/month and if you are a student or just started out its a lot of overhead. That’s why Github has a student developer pack!.
+
+<div style="width:100%" style="text-align:center;padding:30px">
+    <img src="/assets/github-student-developer-1.png" alt="step 1" width="700rem"/>
+Select Accordingly<br>
+
+</div>
+
+
+Everyone doesn’t have a have an college email so what can we do?
+
+Select your normal email.
+
+Get a picture of an academic picture with the date preferred as recent as possible.
+
+You saw my rejected application that was me using my ID card dated 2016 for my application on 2017.
+
+So i used my examination admit card. Use any academic document that has a recent date.
+
+YOU ARE DONE!
+
+Books to read:
+
+Introducing GitHub: A Non-Technical Guide by O’Reilly Media
+
+My Laptop: ASUS GL552VW
