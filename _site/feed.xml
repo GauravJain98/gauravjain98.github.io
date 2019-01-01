@@ -5,8 +5,8 @@
     <description>&lt;h3&gt;Hello, World! I am &lt;/h3&gt;&lt;h1&gt;Everything but looks&lt;/h1&gt;&lt;h3&gt;I'll implement your vision&lt;/h3&gt;and keep you on your toes ;)</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Jan 2019 21:04:21 +0530</pubDate>
-    <lastBuildDate>Tue, 01 Jan 2019 21:04:21 +0530</lastBuildDate>
+    <pubDate>Tue, 01 Jan 2019 21:17:20 +0530</pubDate>
+    <lastBuildDate>Tue, 01 Jan 2019 21:17:20 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -32,25 +32,39 @@ Select Accordingly&lt;br /&gt;
 
 &lt;p&gt;Everyone doesn’t have a have an college email so what can we do?&lt;/p&gt;
 
-&lt;p&gt;Select your normal email.&lt;/p&gt;
+&lt;div style=&quot;text-align:center;padding:30px&quot;&gt;
+    &lt;img src=&quot;/assets/github-student-developer-2.png&quot; alt=&quot;step 2&quot; width=&quot;700rem&quot; /&gt;
 
-&lt;p&gt;Get a picture of an academic picture with the date preferred as recent as possible.&lt;/p&gt;
+Select your normal email.&lt;br /&gt;
+
+&lt;/div&gt;
+&lt;div style=&quot;text-align:center;padding:30px&quot;&gt;
+    &lt;img src=&quot;/assets/github-student-developer-3.png&quot; alt=&quot;step 3&quot; width=&quot;700rem&quot; /&gt;
+
+Get a picture of an academic document with the date preferred as recent as possible.&lt;br /&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;You saw my rejected application that was me using my ID card dated 2016 for my application on 2017.&lt;/p&gt;
 
 &lt;p&gt;So i used my examination admit card. Use any academic document that has a recent date.&lt;/p&gt;
 
-&lt;p&gt;YOU ARE DONE!&lt;/p&gt;
+&lt;div style=&quot;text-align:center;padding:30px&quot;&gt;
+    &lt;img src=&quot;/assets/github-student-developer-4.png&quot; alt=&quot;step 4&quot; width=&quot;700rem&quot; /&gt;
+    &lt;h4&gt;&lt;b&gt;YOU ARE DONE!.&lt;/b&gt;&lt;/h4&gt;
+&lt;br /&gt;
 
-&lt;p&gt;Books to read:&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Introducing GitHub: A Non-Technical Guide by O’Reilly Media&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Books to read:&lt;/b&gt;&lt;/p&gt;
 
-&lt;p&gt;My Laptop: ASUS GL552VW&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://amzn.to/2rPUa8E&quot;&gt;Introducing GitHub: A Non-Technical Guide by O’Reilly Media&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;My Laptop:&lt;/b&gt; &lt;a href=&quot;https://amzn.to/2CucU3J&quot;&gt;ASUS GL552VW&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 22 Dec 2018 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/github/2018/12/22/welcome-to-jekyll11.html</link>
-        <guid isPermaLink="true">http://localhost:4000/github/2018/12/22/welcome-to-jekyll11.html</guid>
+        <link>http://localhost:4000/github/2018/12/22/github-education-pack-without-college-email.html</link>
+        <guid isPermaLink="true">http://localhost:4000/github/2018/12/22/github-education-pack-without-college-email.html</guid>
         
         <category>community</category>
         

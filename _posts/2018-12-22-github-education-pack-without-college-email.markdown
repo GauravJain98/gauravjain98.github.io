@@ -28,18 +28,37 @@ Select Accordingly<br>
 
 Everyone doesn’t have a have an college email so what can we do?
 
-Select your normal email.
+<div style="width:100%" style="text-align:center;padding:30px">
+    <img src="/assets/github-student-developer-2.png" alt="step 2" width="700rem"/>
 
-Get a picture of an academic picture with the date preferred as recent as possible.
+Select your normal email.<br>
+
+</div>
+<div style="width:100%" style="text-align:center;padding:30px">
+    <img src="/assets/github-student-developer-3.png" alt="step 3" width="700rem"/>
+
+Get a picture of an academic document with the date preferred as recent as possible.<br>
+
+</div>
+
+
+
+
 
 You saw my rejected application that was me using my ID card dated 2016 for my application on 2017.
 
 So i used my examination admit card. Use any academic document that has a recent date.
 
-YOU ARE DONE!
+<div style="width:100%" style="text-align:center;padding:30px">
+    <img src="/assets/github-student-developer-4.png" alt="step 4" width="700rem"/>
+    <h4><b>YOU ARE DONE!.</b></h4>
+<br>
 
-Books to read:
+</div>
 
-Introducing GitHub: A Non-Technical Guide by O’Reilly Media
 
-My Laptop: ASUS GL552VW
+<b>Books to read:</b>
+
+[Introducing GitHub: A Non-Technical Guide by O’Reilly Media](https://amzn.to/2rPUa8E)
+
+<b>My Laptop:</b> [ASUS GL552VW](https://amzn.to/2CucU3J)
