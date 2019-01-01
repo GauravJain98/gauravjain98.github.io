@@ -2,12 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gaurav Jain</title>
-    <description>&lt;h3&gt;Hello, world!&lt;/h3&gt;&lt;h1&gt;DevJournal&lt;/h1&gt;&lt;h3&gt;Awesome Jekyll Theme for Developers!&lt;/h3&gt;Hope you like it!</description>
+    <description>&lt;h3&gt;Hello, World! I am &lt;/h3&gt;&lt;h1&gt;Everything but looks&lt;/h1&gt;&lt;h3&gt;I'll implement your vision&lt;/h3&gt;and keep you on your toes ;)</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Jan 2019 13:56:33 +0530</pubDate>
-    <lastBuildDate>Tue, 01 Jan 2019 13:56:33 +0530</lastBuildDate>
+    <pubDate>Tue, 01 Jan 2019 15:50:30 +0530</pubDate>
+    <lastBuildDate>Tue, 01 Jan 2019 15:50:30 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Easier blogging website</title>
+        <description>&lt;p&gt;I have been doing freelance work for a while and had a requirement that was hard for me to think that ill be able to run with but I found &lt;a href=&quot;https://github.com/yabwe/medium-editor&quot;&gt;this library&lt;/a&gt; that does it for me.&lt;/p&gt;
+
+&lt;p&gt;What is does is make the editor that I am writing this on for me&lt;/p&gt;
+
+&lt;h2 id=&quot;the-implementation&quot;&gt;The Implementation&lt;/h2&gt;
+
+&lt;p&gt;What this does is create an editable textarea tag that is filled with HTML that can make it website styled with which you can save as a HTML file or if you are using a templating engine(like Jinja, Mustache, DoT etc) you can save this content and render it by tagging it as save HTML(depending on your engine)&lt;/p&gt;
+
+&lt;p&gt;This comes in multiple &lt;a href=&quot;https://github.com/yabwe/medium-editor/wiki/Themes&quot;&gt;themes&lt;/a&gt; for the toggle buttons.&lt;/p&gt;
+
+&lt;p&gt;You can edit everything from creating &lt;a href=&quot;https://github.com/yabwe/medium-editor/blob/9156a11407451c0ee2e30d971798d6476de4d354/src/js/extensions/WALKTHROUGH-BUTTON.md&quot;&gt;custom buttons&lt;/a&gt; to the color of the buttons.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/medium.png&quot; alt=&quot;drawing&quot; width=&quot;700rem&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;plug-ins&quot;&gt;Plug-Ins&lt;/h2&gt;
+
+&lt;p&gt;There are lot of plug ins so don’t trying to re implement any of those if your purpose can be solved by any of those.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 07 Nov 2018 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/frontend/2018/11/07/easier-blogging-websites.html</link>
+        <guid isPermaLink="true">http://localhost:4000/frontend/2018/11/07/easier-blogging-websites.html</guid>
+        
+        <category>web development</category>
+        
+        <category>frontend</category>
+        
+        <category>library</category>
+        
+        <category>medium editor</category>
+        
+        
+        <category>frontend</category>
+        
+      </item>
     
       <item>
         <title>Or maybe give them a read :)</title>
