@@ -5,9 +5,209 @@
     <description>&lt;h3&gt;Hello, World! I am &lt;/h3&gt;&lt;h1&gt;Everything but looks&lt;/h1&gt;&lt;h3&gt;I'll implement your vision&lt;/h3&gt;and keep you on your toes ;)</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Jan 2019 23:18:33 +0530</pubDate>
-    <lastBuildDate>Tue, 01 Jan 2019 23:18:33 +0530</lastBuildDate>
+    <pubDate>Sun, 27 Jan 2019 02:55:05 +0530</pubDate>
+    <lastBuildDate>Sun, 27 Jan 2019 02:55:05 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>How I Design Software ?</title>
+        <description>&lt;h2 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h2&gt;
+
+&lt;p&gt;This is for small to intermediate projects&lt;/p&gt;
+
+&lt;h1 id=&quot;for-some-background-&quot;&gt;&lt;strong&gt;For some background :&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;I am 3rd year Computer Science Undergraduate student.&lt;/li&gt;
+  &lt;li&gt;I taught myself to code(and I got a super smart mentor).&lt;/li&gt;
+  &lt;li&gt;I make freelance software here and there for startups and it mostly their main product and I get super scared that what if my software- crashes and they think I am a fraud.&lt;/li&gt;
+  &lt;li&gt;I am a back-end person because I hate when someone says(Mostly myself) “I don’t know what’s wrong but something is”.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;let-us-start&quot;&gt;&lt;strong&gt;Let us start!!!&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;The thing I learn from messing a lot of my own personal projects is that we can’t just start coding. Don’t get me wrong if you are starting and it’s your own project and you don’t mind it crashing and burning to get some experience and learn then code away but if you are making it for someone and it &lt;strong&gt;Just cannot be crashing&lt;/strong&gt; what we need to do is designing the whole software before coding.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-do-we-design&quot;&gt;&lt;strong&gt;Why do we design?&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;I know it is one of the single most boring tasks that is possible! We love to code right away, but the problem is that about 90% of the developer time is spent debugging, refactoring or rewriting previously written code, So the best trick is to design your application first and then start coding. We have an overview of our code, see where we could go wrong and answer some questions like&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What algorithms should you use&lt;/li&gt;
+  &lt;li&gt;Which architecture is most sensible for your project&lt;/li&gt;
+  &lt;li&gt;What is the best database structure/schema for your project&lt;/li&gt;
+  &lt;li&gt;And many more….&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;design-how-much-and-how&quot;&gt;&lt;strong&gt;Design How much and how???&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Now you know why you should design we need a way to know how and how much??&lt;/p&gt;
+
+&lt;p&gt;Wait how much there is a limit? Yes, there is something called over-designing as well.
+So when we design we design till it is realistically possible to scale
+basically this method we can get a server to handle 500-1000 hints/second without a problem&lt;/p&gt;
+
+&lt;p&gt;Before we start designing we need to understand 3-tier architecture and the “pyramid of change”&lt;/p&gt;
+
+&lt;h3 id=&quot;3-tier-architecture&quot;&gt;&lt;strong&gt;3 Tier Architecture&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Any application that has any logic it uses this architecture&lt;/p&gt;
+
+&lt;p&gt;Any function in a gist:&lt;/p&gt;
+
+&lt;p&gt;I Client makes a Request – &amp;gt; II Server understands, calculated the required logic and makes the required queried for the required logic  –&amp;gt; III Database gives/stores the data –&amp;gt; II Server formulates a response and returns to the client –&amp;gt; I Client gets a response&lt;/p&gt;
+
+&lt;h3 id=&quot;pyramid-of-change&quot;&gt;&lt;strong&gt;Pyramid of change&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;div style=&quot;text-align:center;&quot;&gt;
+&lt;img src=&quot;/assets/pyramid-of-change.png&quot; alt=&quot;step 1&quot; width=&quot;400rem&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This shows how changes scale:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Change the Front-End looks:
+    &lt;ol&gt;
+      &lt;li&gt;Change the Front-End code&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Change the Server Function:
+    &lt;ol&gt;
+      &lt;li&gt;Change the Server code&lt;/li&gt;
+      &lt;li&gt;Change the Front-End code&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Change the Database Structure:
+    &lt;ol&gt;
+      &lt;li&gt;Change the Database code&lt;/li&gt;
+      &lt;li&gt;Change the Server code&lt;/li&gt;
+      &lt;li&gt;Change the Front-End code&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;flow-i-follow-while-designing&quot;&gt;&lt;strong&gt;Flow I follow while designing&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Now we know what architecture we will use and how changes scale. We can start designing at last&lt;/p&gt;
+
+&lt;p&gt;We follow the same pattern as the ‘Pyramid of Change’ that is:-&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Design the Database structure&lt;/li&gt;
+  &lt;li&gt;Design the logic of your back-end&lt;/li&gt;
+  &lt;li&gt;Design your front-end&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Step 2 and 3 can be worked on concurrently if you are an awesome full stack developer or you are a duo(Which is my preference)&lt;/p&gt;
+
+&lt;h2 id=&quot;database-design&quot;&gt;&lt;strong&gt;Database Design&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;formal-definition&quot;&gt;&lt;strong&gt;Formal Definition&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Database design is the organization of data according to a database model.&lt;/li&gt;
+  &lt;li&gt;The designer determines what data must be stored and how the data elements interrelate. With this information, they can begin to fit the data to the database model&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;what-does-that-mean&quot;&gt;&lt;strong&gt;What does that mean?&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Basically Database design is designing how your data should be stored.&lt;/li&gt;
+  &lt;li&gt;If you have only used a NoSQL database then you might be like what is the need for this.&lt;/li&gt;
+  &lt;li&gt;The problem is that NoSQL is not scalable.&lt;/li&gt;
+  &lt;li&gt;NoSQL is originally referring to “nonSQL” or “nonrelational”.&lt;/li&gt;
+  &lt;li&gt;But in real life, we “have” relations so we need a database that has relations build-in and are optimized for it.&lt;/li&gt;
+  &lt;li&gt;NoSQL is used for analytics and non-relational is used for NoSQL&lt;/li&gt;
+  &lt;li&gt;When we add relations that are not logical we can not queries logically.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sitepoint.com/sql-vs-nosql-differences/&quot;&gt;This article&lt;/a&gt; helps explain better&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-to-do-it&quot;&gt;&lt;strong&gt;How to do it?&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;We need to solve some questions to be able to make a good database:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;What is the purpose of your database?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This is supposed to answer what is your database used for basically the requirements for your projects&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;What tables and fields do you need?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here we use visual representations such as &lt;a href=&quot;https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model&quot;&gt;ER diagrams&lt;/a&gt; they give proper relations for your data. I personally use a tool called &lt;a href=&quot;http://dbdesigner.net/&quot;&gt;dbdesigner&lt;/a&gt;  they have 3 free projects I keep deleting old projects. We also need to take care of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Database_normalization&quot;&gt; normality&lt;/a&gt; of the database for future scalability&lt;/p&gt;
+
+&lt;h2 id=&quot;front-end-and-back-end-design&quot;&gt;&lt;strong&gt;Front-end and Back-end Design&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Back-end and Front-end code change far more often than the database if you made your database as normal as possible.
+So the way I approach it is simple but it can cause issues if we are time bound.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-do-it-1&quot;&gt;&lt;strong&gt;How to do it?&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&quot;starting-back-end&quot;&gt;&lt;strong&gt;Starting Back-end&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First I make a full CRUD(&lt;strong&gt;C&lt;/strong&gt;reate &lt;strong&gt;R&lt;/strong&gt;ead &lt;strong&gt;U&lt;/strong&gt;pdate &lt;strong&gt;D&lt;/strong&gt;elete) API for every table.&lt;/li&gt;
+  &lt;li&gt;After that, depending on the requirement I add basic nesting
+    &lt;ul&gt;
+      &lt;li&gt;Example: For a quizzing project I will have tables Quiz, Question, and Options&lt;/li&gt;
+      &lt;li&gt;The CRUD API makes it possible to make each of them separately&lt;/li&gt;
+      &lt;li&gt;For 2 quiz of 10 questions and 4 options, each this will take 2 + 2x10 + 2x10x4 = 102 API calls from the front end which is not how the flow should go.&lt;/li&gt;
+      &lt;li&gt;By nesting the options in the question we reduce the calls to 2 + 2x10 = 22&lt;/li&gt;
+      &lt;li&gt;But nesting questions in the quiz will make the flow wrong as questions can be added after creating the quiz and do not affect the quiz object directly so we do not nest questions in the quiz&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;All the other changes just take place as the front end needs them
+    &lt;ul&gt;
+      &lt;li&gt;This is the step that takes long as this slows the front-end but this step’s time can be reduced as the back-end developer experience increase.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;starting-front-end&quot;&gt;&lt;strong&gt;Starting Front-end&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;This is a relatively easy step from a coding design perspective as we are humans, we can intuitively feel the flow required and if we don’t we need a UX/UI designer for this.&lt;/p&gt;
+
+&lt;h5 id=&quot;last-we-need-is-some-qa-testing-that-i-also-need-to-learn-about&quot;&gt;Last we need is some Q/A testing that I also need to learn about&lt;/h5&gt;
+</description>
+        <pubDate>Sat, 26 Jan 2019 23:00:00 +0530</pubDate>
+        <link>http://localhost:4000/software/2019/01/26/how-i-design-software.html</link>
+        <guid isPermaLink="true">http://localhost:4000/software/2019/01/26/how-i-design-software.html</guid>
+        
+        <category>web</category>
+        
+        <category>development</category>
+        
+        <category>backend</category>
+        
+        <category>django</category>
+        
+        <category>django-rest-framework</category>
+        
+        <category>DRF</category>
+        
+        <category>frontend</category>
+        
+        <category>design</category>
+        
+        <category>how</category>
+        
+        <category>to</category>
+        
+        <category>gauravjain98</category>
+        
+        <category>gaurav</category>
+        
+        <category>jeklly</category>
+        
+        <category>developer</category>
+        
+        <category>designer</category>
+        
+        <category>freelancer</category>
+        
+        
+        <category>software</category>
+        
+      </item>
     
       <item>
         <title>Github education pack without a .edu college email</title>

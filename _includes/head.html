@@ -40,6 +40,11 @@
 		<meta content="{{ tag }}" property="article:tag">
 	{% endfor %}
 {% endif %}
+{% if site.tags %}
+	{% for tag in site.tags %}
+		<meta content="{{ tag[0] }}" property="article:tag">
+	{% endfor %}
+{% endif %}
 <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
