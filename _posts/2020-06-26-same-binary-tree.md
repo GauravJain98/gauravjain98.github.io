@@ -2,7 +2,7 @@
 layout: post
 title:  "Same Binary Tree"
 date:   2019-06-26 00:00:00 +0530
-categories: [interview-question]
+categories: [interview question]
 tags: [competitve coding,binary tree,recursion,gauravjain98,blog,training]
 author: "Gaurav Jain"
 ---
