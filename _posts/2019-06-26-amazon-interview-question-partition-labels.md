@@ -2,7 +2,7 @@
 layout: post
 title:  "Amazon Interview Question Partition Labels"
 date:   2019-06-26 00:00:00 +0530
-categories: [interviewquestion]
+categories: [interview-question,amazon]
 tags: [competitve coding,amazon,partition labels,gauravjain98,blog,training]
 author: "Gaurav Jain"
 ---
