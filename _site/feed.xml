@@ -5,9 +5,182 @@
     <description>&lt;h3&gt;Hello, World! I am &lt;/h3&gt;&lt;h1&gt;Everything but looks&lt;/h1&gt;&lt;h3&gt;I'll implement your vision&lt;/h3&gt;and keep you on your toes ;)</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Jan 2019 15:44:42 +0530</pubDate>
-    <lastBuildDate>Sun, 27 Jan 2019 15:44:42 +0530</lastBuildDate>
+    <pubDate>Sat, 29 Jun 2019 15:06:05 +0530</pubDate>
+    <lastBuildDate>Sat, 29 Jun 2019 15:06:05 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Same Binary Tree</title>
+        <description>&lt;h2 id=&quot;the-question&quot;&gt;The Question&lt;/h2&gt;
+
+&lt;p&gt;Given two binary trees, write a function to check if they are the same or not.&lt;/p&gt;
+
+&lt;p&gt;Two binary trees are considered the same if they are structurally identical and the nodes have the same value.
+You can practice it on &lt;a href=&quot;https://leetcode.com/problems/same-tree/&quot;&gt;leetcode&lt;/a&gt; before reading the solution&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;Let us break the question up to an objective parts&lt;/p&gt;
+
+&lt;p&gt;The first Idea when we have tree is recursion as we never know their depth.
+We have 2 steps here.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Check if the roots are same (both null or both have same val)&lt;/li&gt;
+  &lt;li&gt;If they are not then return false&lt;/li&gt;
+  &lt;li&gt;if the root is same then we check if the respective left and right are same&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;code-in-java&quot;&gt;Code In Java&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        boolean ans =true;
+        if(p==null&amp;amp;&amp;amp;q==null){
+            return ans;
+        }
+        if(p==null){
+            return false;
+        }
+        if(q==null){
+            return false;
+        }
+        return (p.val==q.val)&amp;amp;&amp;amp;isSameTree(p.left,q.left)&amp;amp;&amp;amp;isSameTree(p.right,q.right);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;evaluation&quot;&gt;Evaluation&lt;/h2&gt;
+
+&lt;h3 id=&quot;theoretical&quot;&gt;Theoretical&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Space Complexity: O(h)
+
+Time Complexity: O(n)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;leetcode&quot;&gt;Leetcode&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Memory: 34.1MB
+Runtime: 0 ms
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Wed, 26 Jun 2019 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/interview%20question/2019/06/26/same-binary-tree.html</link>
+        <guid isPermaLink="true">http://localhost:4000/interview%20question/2019/06/26/same-binary-tree.html</guid>
+        
+        <category>competitve coding</category>
+        
+        <category>binary tree</category>
+        
+        <category>recursion</category>
+        
+        <category>gauravjain98</category>
+        
+        <category>blog</category>
+        
+        <category>training</category>
+        
+        
+        <category>interview question</category>
+        
+      </item>
+    
+      <item>
+        <title>Amazon Interview Question Partition Labels</title>
+        <description>&lt;h2 id=&quot;the-question&quot;&gt;The Question&lt;/h2&gt;
+
+&lt;p&gt;A string &lt;italic&gt;S&lt;/italic&gt; of lowercase letters is given. We want to partition this string into as many parts as possible so that each letter appears in at most one part, and return a list of integers representing the size of these parts. 
+You can practice it on &lt;a href=&quot;https://leetcode.com/problems/partition-labels/&quot;&gt;leetcode&lt;/a&gt; before reading the solution&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;Let us break the question up to an objective parts&lt;/p&gt;
+
+&lt;p&gt;What is required is that no 2 partitions can have the same characters in them.&lt;/p&gt;
+
+&lt;p&gt;So what we are going to do is the following:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Have a frequency table/array(called right) of the whole string.&lt;/li&gt;
+  &lt;li&gt;Iterate over string from the left and storing all character we have seen in a set and update the frequency table of the right.&lt;/li&gt;
+  &lt;li&gt;Whenever we have a character turn 0 in the table(the character is only in the left) we remove it from the seen set as it is only in the left now.&lt;/li&gt;
+  &lt;li&gt;If seen is empty that means that everything on the left is only in that partition hence we can add it to the ans array reset our count&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;code-in-java&quot;&gt;Code In Java&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Solution {
+    public List&amp;lt;Integer&amp;gt; partitionLabels(String S) {
+        List&amp;lt;Integer&amp;gt; ans = new ArrayList&amp;lt;Integer&amp;gt;();
+        if(S.length() == 0){
+            return ans;
+        }
+        char[] arr = S.toCharArray();
+        HashSet&amp;lt;Character&amp;gt; seen = new HashSet&amp;lt;Character&amp;gt;();
+        int[] right = new int[26];
+        for(char c:arr)
+            right[c-'a']++;
+        int count =0;
+        for(char c:arr){
+            count++;
+            seen.add(c);
+            if(--right[c-'a'] == 0){
+                seen.remove(c);
+                if(seen.isEmpty()){
+                    ans.add(count);
+                    count=0;
+                }
+            }
+        }
+        return ans;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;evaluation&quot;&gt;Evaluation&lt;/h2&gt;
+
+&lt;h3 id=&quot;theoretical&quot;&gt;Theoretical&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Space Complexity: O(n)
+
+Time Complexity: O(n)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;leetcode&quot;&gt;Leetcode&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Memory: 36.2MB
+Runtime: 4ms
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Wed, 26 Jun 2019 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/interview%20question/amazon/2019/06/26/amazon-interview-question-partition-labels.html</link>
+        <guid isPermaLink="true">http://localhost:4000/interview%20question/amazon/2019/06/26/amazon-interview-question-partition-labels.html</guid>
+        
+        <category>competitve coding</category>
+        
+        <category>amazon</category>
+        
+        <category>partition labels</category>
+        
+        <category>gauravjain98</category>
+        
+        <category>blog</category>
+        
+        <category>training</category>
+        
+        
+        <category>interview question</category>
+        
+        <category>amazon</category>
+        
+      </item>
     
       <item>
         <title>How I Design Software ?</title>
