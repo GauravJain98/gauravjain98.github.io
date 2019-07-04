@@ -24,7 +24,7 @@ You can practice it on [leetcode](https://leetcode.com/problems/add-binary/) bef
 
 ## Solution
 
-Relativaly a simple solution. we start adding from the end of both the strings.
+Relatively a simple solution. we start adding from the end of both the strings.
 
 We check if the sum>2 then we get the mod of the sum and the carry becomes true and add the result normally.
 
