@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "1 bit and 2 bit characters"
-date:   2019-07-06 00:00:00 +0530
+date:   2019-07-05 00:00:00 +0530
 categories: [interview question]
 tags: [competitve coding,dictionary,tries,recursion,gauravjain98,blog,training,string,leetcode,hackerrank,hackerearth,american express]
 author: "Gaurav Jain"

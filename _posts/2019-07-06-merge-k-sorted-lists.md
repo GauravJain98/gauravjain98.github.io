@@ -87,9 +87,9 @@ class Solution {
 
 ### Theoretical
 
-    Time Complexity: O(log(N))
+    Time Complexity: O(N)
 
-    Space Complexity: O(1)
+    Space Complexity: O(N)
 
 ### Leetcode
 
