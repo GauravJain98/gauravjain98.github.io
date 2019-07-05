@@ -8,10 +8,10 @@
 <meta content="Gaurav Jain" property="og:site_name">
 
 
-	<meta content="Gaurav Jain" property="og:title">
+	<meta content="Add Binary" property="og:title">
 
 
-	<meta content="website" property="og:type">
+	<meta content="article" property="og:type">
 <link rel="apple-touch-icon" sizes="57x57" href="../assets">
 <link rel="apple-touch-icon" sizes="60x60" href="../assets/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="../assets/apple-icon-72x72.png">
@@ -33,13 +33,38 @@
 	<meta content="<h3>Hello, World! I am </h3><h1>Everything but looks</h1><h3>I'll implement your vision</h3>and keep you on your toes ;)" property="og:description">
 
 
-	<meta content="http://localhost:4000/" property="og:url">
+	<meta content="http://localhost:4000/interview%20question/2019/07/02/Add-Binary.html" property="og:url">
 
+
+	<meta content="2019-07-02T00:00:00+05:30" property="article:published_time">
+	<meta content="http://localhost:4000/about/" property="article:author">
 
 
 <meta property="og:image" content="">
 
 
+	
+		<meta content="interview question" property="article:section">
+	
+
+
+	
+		<meta content="competitve coding" property="article:tag">
+	
+		<meta content="binary number" property="article:tag">
+	
+		<meta content="recursion" property="article:tag">
+	
+		<meta content="gauravjain98" property="article:tag">
+	
+		<meta content="blog" property="article:tag">
+	
+		<meta content="training" property="article:tag">
+	
+		<meta content="string" property="article:tag">
+	
+		<meta content="leetcode" property="article:tag">
+	
 
 
 	
@@ -122,8 +147,8 @@
 		<meta content="american express" property="article:tag">
 	
 
-<title>Gaurav Jain</title>
-<meta name="description" content="<h3>Hello, World! I am </h3><h1>Everything but looks</h1><h3>I'll implement your vision</h3>and keep you on your toes ;)">
+<title>Add Binary</title>
+<meta name="description" content="The QuestionGiven two binary strings, return their sum (also a binary string).">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/css/main.css">
@@ -140,7 +165,7 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/interview%20question/2019/07/02/Add-Binary.html">
 <link rel="alternate" type="application/rss+xml" title="Gaurav Jain" href="http://localhost:4000/feed.xml">
 </head>
 
@@ -208,51 +233,89 @@
 </section>
 
 <section>
-<section>
-    <div class="jumbotron">
-        <div class="container">
-            <h3>Hello, World! I am </h3><h1>Everything but looks</h1><h3>I'll implement your vision</h3>and keep you on your toes ;)
-        </div>
-</div>
-</section>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">Add Binary</h1>
+      <p class="post-meta"><time datetime="2019-07-02T00:00:00+05:30" itemprop="datePublished">Jul 2, 2019</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Gaurav Jain</span></span></p>
+      
+    </div>
 
-<section id="page-content">
-	<div>
-		<div class="col-md-offset-1 col-md-2">
-			<div style="text-align:center;">
-				<img style="border-radius:50%;height:15em;" src="/assets/me.jpeg">
-			</div>
-		</div>
-		<div class="col-md-offset-1 col-md-8">
-			<div class="mx-auto">
-				<div class="manual manual-title">
-					Who am I?
-				</div>
-				<p>
-					<div class="manual-content">
-						- I am a developer of the heart of any software.<br/>
-						- I am an otaku.<br/>
-						- I am not a bodger<br/>
-						- I am a undergraduate student<br/>
-					</div>
-				</p>
-				<br/>
-				<div class="manual manual-title">
-					What I do?
-				</div>
-				<p>
-					<div class="manual-content">
-						- I make softwares.<br/>
-						- I like working on interesting projects.<br/>
-						- <a style="text-decoration:none;" href="#contact">Contact</a> me if you want to work with me.<br/>
-						- I have fun with life (by taking stress always :D).<br/>
-						- I watch anime. A lot. 
-					</div>
-				</p>
-			</div>
-		</div>
-	</div>
-</section>
+</div>
+
+
+  <div class="post-content container" itemprop="articleBody">
+    <h2 id="the-question">The Question</h2>
+
+<p>Given two binary strings, return their sum (also a binary string).</p>
+
+<p>The input strings are both non-empty and contains only characters 1 or 0.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Example 1:
+
+Input: a = "11", b = "1"
+Output: "100"
+</code></pre></div></div>
+
+<p>You can practice it on <a href="https://leetcode.com/problems/add-binary/">leetcode</a> before reading the solution</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>Relatively a simple solution. we start adding from the end of both the strings.</p>
+
+<p>We check if the sum&gt;2 then we get the mod of the sum and the carry becomes true and add the result normally.</p>
+
+<p>if carry is true in the end we add a 1</p>
+
+<p>We do this is because always inserting at 0 multiple times takes too long. So we reverse the string in the end;</p>
+
+<h2 id="code-in-java">Code In Java</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Solution {
+
+	public String addBinary(String a, String b) {
+        StringBuilder result = new StringBuilder();
+        int i = a.length();
+        int j = b.length();
+        boolean carry = false;
+        int sum;
+        while (i &gt; 0 || j &gt; 0) {
+            sum = carry?1:0;
+            if (i &gt; 0) sum += a.charAt(--i) - '0';
+            if (j &gt; 0) sum += b.charAt(--j) - '0';
+            carry = sum/2 == 1;
+            sum = sum % 2;
+            result.append(sum);
+        }
+        if (carry) result.append(1);
+        return result.reverse().toString();
+	}
+}
+</code></pre></div></div>
+
+<h3 id="theoretical">Theoretical</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Space Complexity: O(N)
+
+Time Complexity: O(N)
+</code></pre></div></div>
+
+<h3 id="leetcode">Leetcode</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Memory: 36.1 MB
+
+Runtime: 1 ms
+</code></pre></div></div>
+
+<h2 id="evaluation">Evaluation</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Time: 99.98%
+
+Space: 96.13%
+</code></pre></div></div>
+
+
+  </div>
+
+</article>
 
 </section>
 <nav class="navbar navbar-default navbar-fixed-bottom">

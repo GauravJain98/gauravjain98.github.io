@@ -26,7 +26,7 @@ So what we are going to do is the following:
 4. If seen is empty that means that everything on the left is only in that partition hence we can add it to the ans array reset our count 
 
 ## Code In Java
-```
+{% highlight java %}
 class Solution {
     public List<Integer> partitionLabels(String S) {
         List<Integer> ans = new ArrayList<Integer>();
@@ -53,7 +53,7 @@ class Solution {
         return ans;
     }
 }
-```
+{% endhighlight%}
 
 ## Evaluation
 

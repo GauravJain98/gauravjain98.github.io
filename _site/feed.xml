@@ -5,9 +5,642 @@
     <description>&lt;h3&gt;Hello, World! I am &lt;/h3&gt;&lt;h1&gt;Everything but looks&lt;/h1&gt;&lt;h3&gt;I'll implement your vision&lt;/h3&gt;and keep you on your toes ;)</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 29 Jun 2019 15:06:05 +0530</pubDate>
-    <lastBuildDate>Sat, 29 Jun 2019 15:06:05 +0530</lastBuildDate>
+    <pubDate>Fri, 05 Jul 2019 16:17:39 +0530</pubDate>
+    <lastBuildDate>Fri, 05 Jul 2019 16:17:39 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>kth Symbol in Grammar</title>
+        <description>&lt;h2 id=&quot;the-question&quot;&gt;The Question&lt;/h2&gt;
+
+&lt;p&gt;On the first row, we write a 0. Now in every subsequent row, we look at the previous row and replace each occurrence of 0 with 01, and each occurrence of 1 with 10.&lt;/p&gt;
+
+&lt;p&gt;Given row N and index K, return the K-th indexed symbol in row N. (The values of K are 1-indexed.) (1 indexed).&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Examples:
+Input: N = 1, K = 1
+Output: 0
+
+Input: N = 2, K = 1
+Output: 0
+
+Input: N = 2, K = 2
+Output: 1
+
+Input: N = 4, K = 5
+Output: 1
+
+Explanation:
+row 1: 0
+row 2: 01
+row 3: 0110
+row 4: 01101001
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can practice it on &lt;a href=&quot;https://leetcode.com/problems/k-th-symbol-in-grammar/&quot;&gt;leetcode&lt;/a&gt; before reading the solution&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;This a compiler design problem with the following grammer&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0-&amp;gt;01
+1-&amp;gt;10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div style=&quot;height:60rem;overflow:hidden;padding:30px;text-align:center&quot;&gt;
+    &lt;img src=&quot;/assets/k-th-symbol-in-grammer-explaination.png&quot; alt=&quot;step 1&quot; width=&quot;500rem&quot; /&gt;
+&lt;br /&gt;
+Derivation Tree
+&lt;/div&gt;
+
+&lt;p&gt;From the above we can see when ever we have a right move we change the value and if it is left then we don’t&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;K K-1 Binary No. of 1  Ans
+1  0  0       Even     0
+2  1  1       Old      1
+3  2  10      Old      1
+4  3  11      Even     0
+5  4  100     Old      1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once we find this pattern the code is really simple all we need to check is 2^N &amp;lt; K&lt;/p&gt;
+
+&lt;h2 id=&quot;code-in-java&quot;&gt;Code In Java&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Solution&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;kthGrammar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;pow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;}&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)?&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;2 Line Solution&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;err&quot;&gt;```&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Solution&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;kthGrammar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;pow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bitCount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)?&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;```&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;theoretical&quot;&gt;Theoretical&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Time Complexity: O(log(N))
+
+Space Complexity: O(1)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;leetcode&quot;&gt;Leetcode&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Memory: 32.8 MB
+
+Runtime: 0 ms
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;evaluation&quot;&gt;Evaluation&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Time: 100.00%
+
+Space: 5.07%(No clue how to improve this)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Fri, 05 Jul 2019 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/interview%20question/2019/07/05/k-th-symbol-in-grammar.html</link>
+        <guid isPermaLink="true">http://localhost:4000/interview%20question/2019/07/05/k-th-symbol-in-grammar.html</guid>
+        
+        <category>competitve coding</category>
+        
+        <category>dictionary</category>
+        
+        <category>tries</category>
+        
+        <category>recursion</category>
+        
+        <category>gauravjain98</category>
+        
+        <category>blog</category>
+        
+        <category>training</category>
+        
+        <category>string</category>
+        
+        <category>leetcode</category>
+        
+        <category>hackerrank</category>
+        
+        <category>hackerearth</category>
+        
+        <category>american express</category>
+        
+        
+        <category>interview question</category>
+        
+      </item>
+    
+      <item>
+        <title>Maximum Subarray</title>
+        <description>&lt;h2 id=&quot;the-question&quot;&gt;The Question&lt;/h2&gt;
+
+&lt;p&gt;Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Example:
+
+Input: [-2,1,-3,4,-1,2,1,-5,4],
+Output: 6
+Explanation: [4,-1,2,1] has the largest sum = 6.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can practice it on &lt;a href=&quot;https://leetcode.com/problems/maximum-subarray/&quot;&gt;leetcode&lt;/a&gt; before reading the solution&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;This is solved using &lt;a href=&quot;https://hackernoon.com/kadanes-algorithm-explained-50316f4fd8a6?gi=fb66dadacf02&quot;&gt;Kadane’s Algorithm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;What we do is for each element we try to check if adding the element to old array makes the old array sum larger than the element here alone&lt;/p&gt;
+
+&lt;p&gt;If it alone is larger than the sum of old array its better to just use the element alone&lt;/p&gt;
+
+&lt;h2 id=&quot;code-in-java&quot;&gt;Code In Java&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Solution {
+    public int maxSubArray(int[] nums) {
+        int max = Integer.MIN_VALUE;
+        int curr = 0;
+        for(int i:nums){
+            if(i&amp;gt;curr+i){
+                curr = i;
+            }else{
+                curr+=i;
+            }
+            max=Math.max(max,curr);
+        }
+        return max;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;theoretical&quot;&gt;Theoretical&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Time Complexity: O(N)
+
+Space Complexity: O(M + (N-M)26)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;leetcode&quot;&gt;Leetcode&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Memory: 38.6 MB
+
+Runtime: 1 ms
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;evaluation&quot;&gt;Evaluation&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Time: 90.31%
+
+Space: 45.31%
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Thu, 04 Jul 2019 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/interview%20question/amazon/2019/07/04/maximum-subarray.html</link>
+        <guid isPermaLink="true">http://localhost:4000/interview%20question/amazon/2019/07/04/maximum-subarray.html</guid>
+        
+        <category>competitve coding</category>
+        
+        <category>dictionary</category>
+        
+        <category>tries</category>
+        
+        <category>recursion</category>
+        
+        <category>gauravjain98</category>
+        
+        <category>blog</category>
+        
+        <category>training</category>
+        
+        <category>string</category>
+        
+        <category>leetcode</category>
+        
+        <category>hackerrank</category>
+        
+        <category>hackerearth</category>
+        
+        <category>american express</category>
+        
+        
+        <category>interview question</category>
+        
+        <category>amazon</category>
+        
+      </item>
+    
+      <item>
+        <title>Add and Search Word Data Structure Design</title>
+        <description>&lt;h2 id=&quot;the-question&quot;&gt;The Question&lt;/h2&gt;
+
+&lt;p&gt;Design a data structure that supports the following two operations:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void addWord(word)
+bool search(word)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;search(word) can search a literal word or a regular expression string containing only letters a-z or .. A . means it can represent any one letter&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Example
+
+addWord(&quot;bad&quot;)
+addWord(&quot;dad&quot;)
+addWord(&quot;mad&quot;)
+search(&quot;pad&quot;) -&amp;gt; false
+search(&quot;bad&quot;) -&amp;gt; true
+search(&quot;.ad&quot;) -&amp;gt; true
+search(&quot;b..&quot;) -&amp;gt; true
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can practice it on &lt;a href=&quot;https://leetcode.com/problems/add-and-search-word-data-structure-design/&quot;&gt;leetcode&lt;/a&gt; before reading the solution&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;Requires making us a &lt;a href=&quot;https://www.geeksforgeeks.org/trie-insert-and-search/&quot;&gt;tries&lt;/a&gt; for the inserted string&lt;/p&gt;
+
+&lt;p&gt;Then we search the &lt;a href=&quot;https://www.geeksforgeeks.org/trie-insert-and-search/&quot;&gt;tries&lt;/a&gt; but when we encounter a ‘.’ we try all 26 possibilities and move the index to the next word;&lt;/p&gt;
+
+&lt;p&gt;I am using a recursive solution as it will make the solution code simpler to understand/debug which has an advantage in interviews and in the work&lt;/p&gt;
+
+&lt;h2 id=&quot;code-in-java&quot;&gt;Code In Java&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class WordDictionary {
+    class Tries{
+        boolean word;
+        Tries[] next;
+        Tries(){
+            word = false;
+        }
+    }
+    Tries base;
+    /** Initialize your data structure here. */
+    public WordDictionary() {
+        base = new Tries();
+    }    
+    /** Adds a word into the data structure. */
+    public void addWord(String word) {
+        Tries temp = base;
+        for(char c:word.toCharArray()){
+            if(temp.next == null){
+                temp.next = new Tries[26];
+            }
+            if(temp.next[c-'a'] == null){
+                temp.next[c-'a'] = new Tries();
+            }
+            temp = temp.next[c-'a'];
+        }
+        temp.word = true;
+    }
+    
+    /** Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. */
+    public boolean search(String word) {
+        return search(word,base);
+    }
+    public boolean search(String word,Tries base){
+        if(base == null){return false;}
+        for(int i=0;i&amp;lt;word.length();i++){
+            if(word.charAt(i) == '.'){
+                for(int j=0;j&amp;lt;26;j++){
+                    if(base.next!=null &amp;amp;&amp;amp; search(word.substring(i+1),base.next[j])){
+                        return true;
+                    }
+                }
+                return false;
+            }
+            else {
+                if(base.next==null || base.next[word.charAt(i) - 'a'] == null){
+                    return false;
+                }
+                base = base.next[word.charAt(i) - 'a'];
+            }
+        }
+        return base.word;
+    }
+}
+
+/**
+ * Your WordDictionary object will be instantiated and called as such:
+ * WordDictionary obj = new WordDictionary();
+ * obj.addWord(word);
+ * boolean param_2 = obj.search(word);
+ */
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;theoretical&quot;&gt;Theoretical&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Insert Time Complexity: O(N)
+
+Search Time Complexity: O(M + (N-M)26)
+
+M is the number of . in the search
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;leetcode&quot;&gt;Leetcode&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Memory: 50.5 MB
+
+Runtime: 80 ms
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;evaluation&quot;&gt;Evaluation&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Time: 42.06%
+
+Space: 100.00%
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 04 Jul 2019 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/interview%20question/amazon/2019/07/04/add-and-search-word-data-structure-design.html</link>
+        <guid isPermaLink="true">http://localhost:4000/interview%20question/amazon/2019/07/04/add-and-search-word-data-structure-design.html</guid>
+        
+        <category>competitve coding</category>
+        
+        <category>dictionary</category>
+        
+        <category>tries</category>
+        
+        <category>recursion</category>
+        
+        <category>gauravjain98</category>
+        
+        <category>blog</category>
+        
+        <category>training</category>
+        
+        <category>string</category>
+        
+        <category>leetcode</category>
+        
+        <category>hackerrank</category>
+        
+        <category>hackerearth</category>
+        
+        <category>american express</category>
+        
+        
+        <category>interview question</category>
+        
+        <category>amazon</category>
+        
+      </item>
+    
+      <item>
+        <title>Add Binary</title>
+        <description>&lt;h2 id=&quot;the-question&quot;&gt;The Question&lt;/h2&gt;
+
+&lt;p&gt;Given two binary strings, return their sum (also a binary string).&lt;/p&gt;
+
+&lt;p&gt;The input strings are both non-empty and contains only characters 1 or 0.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Example 1:
+
+Input: a = &quot;11&quot;, b = &quot;1&quot;
+Output: &quot;100&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can practice it on &lt;a href=&quot;https://leetcode.com/problems/add-binary/&quot;&gt;leetcode&lt;/a&gt; before reading the solution&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;Relatively a simple solution. we start adding from the end of both the strings.&lt;/p&gt;
+
+&lt;p&gt;We check if the sum&amp;gt;2 then we get the mod of the sum and the carry becomes true and add the result normally.&lt;/p&gt;
+
+&lt;p&gt;if carry is true in the end we add a 1&lt;/p&gt;
+
+&lt;p&gt;We do this is because always inserting at 0 multiple times takes too long. So we reverse the string in the end;&lt;/p&gt;
+
+&lt;h2 id=&quot;code-in-java&quot;&gt;Code In Java&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Solution {
+
+	public String addBinary(String a, String b) {
+        StringBuilder result = new StringBuilder();
+        int i = a.length();
+        int j = b.length();
+        boolean carry = false;
+        int sum;
+        while (i &amp;gt; 0 || j &amp;gt; 0) {
+            sum = carry?1:0;
+            if (i &amp;gt; 0) sum += a.charAt(--i) - '0';
+            if (j &amp;gt; 0) sum += b.charAt(--j) - '0';
+            carry = sum/2 == 1;
+            sum = sum % 2;
+            result.append(sum);
+        }
+        if (carry) result.append(1);
+        return result.reverse().toString();
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;theoretical&quot;&gt;Theoretical&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Space Complexity: O(N)
+
+Time Complexity: O(N)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;leetcode&quot;&gt;Leetcode&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Memory: 36.1 MB
+
+Runtime: 1 ms
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;evaluation&quot;&gt;Evaluation&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Time: 99.98%
+
+Space: 96.13%
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Tue, 02 Jul 2019 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/interview%20question/2019/07/02/Add-Binary.html</link>
+        <guid isPermaLink="true">http://localhost:4000/interview%20question/2019/07/02/Add-Binary.html</guid>
+        
+        <category>competitve coding</category>
+        
+        <category>binary number</category>
+        
+        <category>recursion</category>
+        
+        <category>gauravjain98</category>
+        
+        <category>blog</category>
+        
+        <category>training</category>
+        
+        <category>string</category>
+        
+        <category>leetcode</category>
+        
+        
+        <category>interview question</category>
+        
+      </item>
+    
+      <item>
+        <title>Flipe Equivalent Binary Trees</title>
+        <description>&lt;h2 id=&quot;the-question&quot;&gt;The Question&lt;/h2&gt;
+
+&lt;p&gt;For a binary tree T, we can define a flip operation as follows: choose any node, and swap the left and right child subtrees.&lt;/p&gt;
+
+&lt;p&gt;A binary tree X is flip equivalent to a binary tree Y if and only if we can make X equal to Y after some number of flip operations.&lt;/p&gt;
+
+&lt;p&gt;Write a function that determines whether two binary trees are flip equivalent.  The trees are given by root nodes root1 and root2.&lt;/p&gt;
+
+&lt;p&gt;You can practice it on &lt;a href=&quot;https://leetcode.com/problems/flip-equivalent-binary-trees/&quot;&gt;leetcode&lt;/a&gt; before reading the solution&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;I have 2 solutions for this. I came up with the 2nd solution by myself but for the 1st one I had to read the leetcode solution
+Let us break the question up to an objective parts&lt;/p&gt;
+
+&lt;h2 id=&quot;definition-for-a-binary-tree-node&quot;&gt;Definition for a binary tree node.&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode(int x) { val = x; }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;solution-1--canonical-traversal-&quot;&gt;Solution 1 ( Canonical Traversal )&lt;/h2&gt;
+
+&lt;p&gt;A Canonical Traversal is of (root,min,max)&lt;/p&gt;
+
+&lt;p&gt;min = min(left,right)&lt;/p&gt;
+
+&lt;p&gt;max = max(left,right)&lt;/p&gt;
+
+&lt;p&gt;for the trees in question if their Canonical Traversals with a delimiter are same then they are flip equivalent&lt;/p&gt;
+
+&lt;h2 id=&quot;code-in-java&quot;&gt;Code In Java&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Solution {
+    public boolean flipEquiv(TreeNode root1, TreeNode root2) {
+        List&amp;lt;Integer&amp;gt; vals1 = new ArrayList();
+        List&amp;lt;Integer&amp;gt; vals2 = new ArrayList();
+        dfs(root1, vals1);
+        dfs(root2, vals2);
+        return vals1.equals(vals2);
+    }
+
+    public boolean Lmin(TreeNode root){
+        // checks if the left node is smaller or null
+        if(root.left == null){
+            return false;
+        }
+        if(root.right == null){
+            return true;
+        }
+        return root.left.val &amp;lt; root.right.val
+    }
+    public void dfs(TreeNode root, List&amp;lt;Integer&amp;gt; vals) {
+        if (root != null) {
+            vals.add(root.val);
+            if (Lmin(root)) {
+                dfs(root.left, vals);
+                dfs(root.right, vals);
+            } else {
+                dfs(root.right, vals);
+                dfs(root.left, vals);
+            }
+            vals.add(null);
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;theoretical&quot;&gt;Theoretical&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Space Complexity: O(N1 + N2)
+
+Time Complexity: O(N1 + N2)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;leetcode&quot;&gt;Leetcode&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Memory: 35.6 MB
+
+Runtime: 1 ms
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;solution-2--recursion-&quot;&gt;Solution 2 ( Recursion )&lt;/h2&gt;
+
+&lt;p&gt;This is a simplier, bit faster and space efficent.&lt;/p&gt;
+
+&lt;p&gt;At every node we have the option to flip or not if either of them makes the tree unequal it breaks and returns false&lt;/p&gt;
+
+&lt;h2 id=&quot;code-in-java-1&quot;&gt;Code in Java&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Solution {
+    public boolean flipEquiv(TreeNode root1, TreeNode root2) {
+        if(root1 == null &amp;amp;&amp;amp; root2 == null){return true;}
+        if(root1 == null || root2 == null || root1.val != root2.val){return false;}
+        return (flipEquiv(root1.left,root2.left) &amp;amp;&amp;amp; flipEquiv(root1.right,root2.right))||(flipEquiv(root1.left,root2.right) &amp;amp;&amp;amp; flipEquiv(root1.right,root2.left));
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;theoretical-1&quot;&gt;Theoretical&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Space Complexity: O(min(N1,N2))
+
+Time Complexity: O(min(H1,H2))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;leetcode-1&quot;&gt;Leetcode&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Memory: 34.5 MB
+
+Runtime: 0 ms
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;evaluation&quot;&gt;Evaluation&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Canonical
+    - Time: 12.20%
+    - Space: 100.00%
+    
+Recursion
+    - Time: 100.00%
+    - Space: 100.00%
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 28 Jun 2019 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/interview%20question/2019/06/28/flip-equivalent-binary-trees.html</link>
+        <guid isPermaLink="true">http://localhost:4000/interview%20question/2019/06/28/flip-equivalent-binary-trees.html</guid>
+        
+        <category>competitve coding</category>
+        
+        <category>binary tree</category>
+        
+        <category>recursion</category>
+        
+        <category>gauravjain98</category>
+        
+        <category>blog</category>
+        
+        <category>training</category>
+        
+        
+        <category>interview question</category>
+        
+      </item>
     
       <item>
         <title>Same Binary Tree</title>
@@ -476,9 +1109,9 @@ Get a picture of an academic document with the date preferred as recent as possi
 
 &lt;p&gt;There are lot of plug ins so don’t trying to re implement any of those if your purpose can be solved by any of those.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 07 Nov 2018 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/frontend/2018/11/07/easier-blogging-websites.html</link>
-        <guid isPermaLink="true">http://localhost:4000/frontend/2018/11/07/easier-blogging-websites.html</guid>
+        <pubDate>Thu, 08 Nov 2018 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/frontend/2018/11/08/easier-blogging-websites.html</link>
+        <guid isPermaLink="true">http://localhost:4000/frontend/2018/11/08/easier-blogging-websites.html</guid>
         
         <category>web development</category>
         

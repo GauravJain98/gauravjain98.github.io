@@ -84,14 +84,12 @@ class Solution {
 2 Line Solution
 
 {% highlight java %}
-```
 class Solution {
     public int kthGrammar(int N, int K) {
         if(Math.pow(2,N) < K){return 0;}
         return (Integer.bitCount(K-1)%2 == 0)?0:1;
     }
 }
-```
 {% endhighlight %}
 
 ### Theoretical

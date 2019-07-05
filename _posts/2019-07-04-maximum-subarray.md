@@ -30,7 +30,7 @@ What we do is for each element we try to check if adding the element to old arra
 If it alone is larger than the sum of old array its better to just use the element alone
 
 ## Code In Java
-```
+{% highlight java %}
 class Solution {
     public int maxSubArray(int[] nums) {
         int max = Integer.MIN_VALUE;
@@ -46,7 +46,7 @@ class Solution {
         return max;
     }
 }
-```
+{% endhighlight %}
 
 ### Theoretical
 

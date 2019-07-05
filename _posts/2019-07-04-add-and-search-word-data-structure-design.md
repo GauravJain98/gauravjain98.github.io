@@ -11,10 +11,10 @@ author: "Gaurav Jain"
     
 Design a data structure that supports the following two operations:
 
-```
+{% highlight java %}
 void addWord(word)
 bool search(word)
-```
+{% endhighlight %}
 
 search(word) can search a literal word or a regular expression string containing only letters a-z or .. A . means it can represent any one letter
 
@@ -42,7 +42,7 @@ Then we search the [tries](https://www.geeksforgeeks.org/trie-insert-and-search/
 I am using a recursive solution as it will make the solution code simpler to understand/debug which has an advantage in interviews and in the work
 
 ## Code In Java
- ```
+{% highlight java %}
 class WordDictionary {
     class Tries{
         boolean word;
@@ -103,7 +103,7 @@ class WordDictionary {
  * obj.addWord(word);
  * boolean param_2 = obj.search(word);
  */
-```
+{% endhighlight %}
 
 ### Theoretical
 

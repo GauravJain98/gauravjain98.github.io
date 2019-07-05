@@ -25,7 +25,7 @@ We have 2 steps here.
 3. if the root is same then we check if the respective left and right are same
 
 ## Code In Java
-```
+{% highlight java %}
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -50,7 +50,7 @@ class Solution {
         return (p.val==q.val)&&isSameTree(p.left,q.left)&&isSameTree(p.right,q.right);
     }
 }
-```
+{% endhighlight %}
 
 ## Evaluation
 

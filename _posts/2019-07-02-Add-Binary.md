@@ -33,7 +33,7 @@ if carry is true in the end we add a 1
 We do this is because always inserting at 0 multiple times takes too long. So we reverse the string in the end;
 
 ## Code In Java
- ```
+{% highlight java %}
 class Solution {
 
 	public String addBinary(String a, String b) {
@@ -54,7 +54,7 @@ class Solution {
         return result.reverse().toString();
 	}
 }
-```
+{% endhighlight %}
 
 ### Theoretical
 

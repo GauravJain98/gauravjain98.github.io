@@ -24,14 +24,14 @@ Let us break the question up to an objective parts
 
 ## Definition for a binary tree node.
 
-```
+{% highlight java %}
 public class TreeNode {
     int val;
     TreeNode left;
     TreeNode right;
     TreeNode(int x) { val = x; }
 }
-```
+{% endhighlight %}
 
 
 ## Solution 1 ( Canonical Traversal )
@@ -45,7 +45,7 @@ max = max(left,right)
 for the trees in question if their Canonical Traversals with a delimiter are same then they are flip equivalent
 
 ## Code In Java
- ```
+{% highlight java %}
 class Solution {
     public boolean flipEquiv(TreeNode root1, TreeNode root2) {
         List<Integer> vals1 = new ArrayList();
@@ -79,7 +79,7 @@ class Solution {
         }
     }
 }
-```
+{% endhighlight %}
 
 ### Theoretical
 
