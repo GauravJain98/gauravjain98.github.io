@@ -7,6 +7,7 @@ skvdhgvduisvb
 <section>
     <div class="container">
         <div class="post-list">
+			{{site.projects}}
 			{% for project in site.projects %}
 				{{ project.title}}
 			<!-- <div class="post-box">
