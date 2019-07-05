@@ -1,0 +1,22 @@
+{
+  "name": "gauravjain98.github.io",
+  "version": "1.0.0",
+  "description": "My Portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GauravJain98/gauravjain98.github.io.git"
+  },
+  "author": "GauravJain98",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GauravJain98/gauravjain98.github.io/issues"
+  },
+  "homepage": "https://github.com/GauravJain98/gauravjain98.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
