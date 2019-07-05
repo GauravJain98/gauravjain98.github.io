@@ -6,7 +6,8 @@ permalink: /nothing/
 <section>
     <div class="container">
         <div class="post-list">
-			{% for project in site.project %}
+			{% for project in site.projects %}
+				{{ project.title}}
 			<!-- <div class="post-box">
 				<div class="post-title">
 					<a class="post-title" href="{{post.url | prepend:site.baseurl }}" > {{ post.title }}</a>
