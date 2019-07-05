@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Easier blogging website"
-date:   2018-11-07 00:00:00 +0530
+date:   2018-11-08 00:00:00 +0530
 categories: [frontend]
 tags: [web development ,frontend, library, medium editor]
 author: "Gaurav Jain"

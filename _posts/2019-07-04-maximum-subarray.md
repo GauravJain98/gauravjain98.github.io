@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Maximum Subarray"
+title:  "Maximum Subarra"
 date:   2019-07-04 00:00:00 +0530
 categories: [interview question,amazon]
 tags: [competitve coding,dictionary,tries,recursion,gauravjain98,blog,training,string,leetcode,hackerrank,hackerearth,american express]
