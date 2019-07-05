@@ -20,8 +20,5 @@
 
 - name: Internship Portal,
   info: Used Django Admin, User, Authentication System and website Subdomaining,
-  madeFor: 
-      name: W3Dev,
-      link: https://w3dev.in/
   tools: [ HTML, CSS, JavaScript,Django,Redis,Memecache],
   link: gaurav.m.w3dev.in
