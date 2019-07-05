@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Blog
-permalink: /blog/
+title: Nothing
+permalink: /nothing/
 ---
 <section>
     <div class="container">
