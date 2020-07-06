@@ -20,7 +20,7 @@ This comes in multiple [themes](https://github.com/yabwe/medium-editor/wiki/Them
 You can edit everything from creating [custom buttons](https://github.com/yabwe/medium-editor/blob/9156a11407451c0ee2e30d971798d6476de4d354/src/js/extensions/WALKTHROUGH-BUTTON.md) to the color of the buttons.
 
 <div style="width:100%" style="text-align:center;padding:30px">
-    <img src="/assets/medium.png" alt="medium-test" width="700rem"/>
+    <img src="/assets/easier-blogging/medium.png" alt="medium-test" width="700rem"/>
 </div>
 
 

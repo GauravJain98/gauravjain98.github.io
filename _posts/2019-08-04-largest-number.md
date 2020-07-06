@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Palindrome Linked List"
-date:   2019-07-19 00:00:00 +0530
+title:  "Largest Number"
+date:   2019-08-04 00:00:00 +0530
 categories: [interview question]
 tags: [competitve coding,dictionary,tries,recursion,gauravjain98,blog,training,string,leetcode,hackerrank,hackerearth,array,sorting,list,arraylist,strings,interview]
 author: "Gaurav Jain"

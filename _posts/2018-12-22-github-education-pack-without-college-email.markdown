@@ -7,7 +7,7 @@ tags: [community,github,student,education,programming]
 ---
 
 <div style="width:100%" style="height:60rem;overflow:hidden;padding:30px;text-align:center">
-    <img src="/assets/github-student-developer-starter.png" alt="step 1" width="500rem"/>
+    <img src="/assets/github-student-developer/github-student-developer-starter.png" alt="step 1" width="500rem"/>
 <br>
 </div>
 
@@ -20,7 +20,7 @@ But it has one problem
 But it’s just $7/month and if you are a student or just started out its a lot of overhead. That’s why Github has a student developer pack!.
 
 <div style="width:100%" style="text-align:center;padding:30px">
-    <img src="/assets/github-student-developer-1.png" alt="step 1" width="700rem"/>
+    <img src="/assets/github-student-developer/github-student-developer-1.png" alt="step 1" width="700rem"/>
 Select Accordingly<br>
 
 </div>
@@ -29,13 +29,13 @@ Select Accordingly<br>
 Everyone doesn’t have a have an college email so what can we do?
 
 <div style="width:100%" style="text-align:center;padding:30px">
-    <img src="/assets/github-student-developer-2.png" alt="step 2" width="700rem"/>
+    <img src="/assets/github-student-developer/github-student-developer-2.png" alt="step 2" width="700rem"/>
 
 Select your normal email.<br>
 
 </div>
 <div style="width:100%" style="text-align:center;padding:30px">
-    <img src="/assets/github-student-developer-3.png" alt="step 3" width="700rem"/>
+    <img src="/assets/github-student-developer/github-student-developer-3.png" alt="step 3" width="700rem"/>
 
 Get a picture of an academic document with the date preferred as recent as possible.<br>
 
@@ -50,7 +50,7 @@ You saw my rejected application that was me using my ID card dated 2016 for my a
 So i used my examination admit card. Use any academic document that has a recent date.
 
 <div style="width:100%" style="text-align:center;padding:30px">
-    <img src="/assets/github-student-developer-4.png" alt="step 4" width="700rem"/>
+    <img src="/assets/github-student-developer/github-student-developer-4.png" alt="step 4" width="700rem"/>
     <h4><b>YOU ARE DONE!.</b></h4>
 <br>
 
