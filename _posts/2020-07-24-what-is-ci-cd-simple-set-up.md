@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What is CICD ? Simple Steps to set it up for free!"
+title:  "What is CI/CD ? Simple Steps to set it up for free!"
 date:   2020-07-24 00:00:00 +0530
 categories: [technologies ,gitlab,cicd]
 tags: [gauravjain98,blog ,training ,interview ,cicd ,gitlab ci ,gitlab ,cicd  ,cicd pipeline ,cicd tools ,what is cicd ,azure devops cicd pipeline ,cicd jenkins ,gitlab cicd ,what is cicd pipeline ,cicd environment ,cicd process ,cicd pipelines ,aws cicd ,cicd stands for ,cicd interview questions ,jenkins cicd ,github cicd ,cicd definition ,cicd devops ,cicd pipeline tools ,cicd pipeline gitlab ,devops cicd ,cicd systems ,drone cicd ,cicd experience ,cicd meaning ,cicd pipeline jenkins ,jenkins cicd pipeline ,automation using cicd in jenkins examples ,golang cicd ,cicd development ,cicd software ,cicd tool ,cicd tutorial ,Free CICD Setup]
@@ -11,7 +11,7 @@ author: "Gaurav Jain"
 
 CI/CD is a term that confuses a lot of beginners when they hear about the software deployment process.
 
-The new developer will sometimes find that when they pushed code to the production, the CI/CD pipeline stopped it in its track from wreaking havoc for the users but have no clue how it was able to do so.
+A new developer will sometimes find that when they pushed code to production, the CI/CD pipeline stopped it in its track from wreaking havoc for the users but have no clue how it was able to do so.
 
 We will discuss what is a CI/CD pipeline and we will also show you how to set one up for your project for free.
 
@@ -55,13 +55,17 @@ A good developer should do this stage locally as well before pushing it to any b
 
 Automated tests for your specific language run in this stage.
 
+This stage tests if your code is working as intended and if you follow good doing practices this will be the stage that will fail the most 
+
 ### Deployement
 
-This is pushing your code to your deployment. We will use Heroku in this example
+This is pushing your code to your deployment. We will use Kubernetes in this example
 
 For every new push, the whole pipeline runs from the start again.
 
-If any job in this pipeline fails even this for the code to pass we re-run the whole pipeline again
+If any stage fails it pipeline fails
+
+For each integration the pipeline runs from the start
 
 # Let us set it up!!
 
