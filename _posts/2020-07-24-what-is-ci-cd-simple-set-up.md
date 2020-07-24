@@ -24,8 +24,7 @@ We will discuss about what is a CI/CD pipeline and we will also show you how to 
 
 # Why do we need CI/CD?
 
-<img src="/assets/what-is-ci-cd-simple-set-up/why-ci-cd.jpeg">
-<small><a target="_blank" href="https://codefresh.io/continuous-deployment/engineers-struggle-with-ci-cd-automation-to-deploy-more-often/">credits</a></small>
+<a target="_blank" href="https://codefresh.io/continuous-deployment/engineers-struggle-with-ci-cd-automation-to-deploy-more-often/"><img style="width:50%" src="/assets/what-is-ci-cd-simple-set-up/why-ci-cd.jpeg"></a>
 
 This survey shows that lack of automation is what prevents us from adding new features and speed to market. 
 
