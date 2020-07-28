@@ -27,7 +27,7 @@ As a Software developer, we can easily right multiple features fast. But we can 
 
 The solution is having a pipeline that will check if everything in your code works without anything breaking. If everything works then deploy the code to production.
 
-# What is CI/CD?
+# What is a CI/CD?
 
 CI/CD has 2 parts
  - CI - Continuous Integration
@@ -37,7 +37,7 @@ CI/CD has 2 parts
 
 In this stage, your code is merged and integrated. This can be done multiple times a day depending on your team's velocity.
 
-This is done using your version control services [gitlab(https://gitlab.com), [github](https://github.com) and more
+This is done using your version control services [gitlab](https://gitlab.com), [github](https://github.com) and more
 
 ## Continuous Deployment / Continuous Delivery
 
@@ -57,7 +57,7 @@ Automated tests for your specific language run in this stage.
 
 This stage tests if your code is working as intended and if you follow good doing practices this will be the stage that will fail the most 
 
-### Deployement
+### Deployment
 
 This is pushing your code to your deployment. We will use Kubernetes in this example
 
@@ -65,7 +65,7 @@ For every new push, the whole pipeline runs from the start again.
 
 If any stage fails it pipeline fails
 
-For each integration the pipeline runs from the start
+For each integration, the pipeline runs from the start
 
 # Let us set it up!!
 
@@ -115,14 +115,14 @@ build:
     - docker build -t $CONTAINER_RELEASE_IMAGE .
     - docker push $CONTAINER_RELEASE_IMAGE
 ```
-Here first the stage will run <span style="color:#275c8f">before_script</span>, login and then run the docker commands in <span style="color:#275c8f">script</span>
+Here first the stage will run <i>before_script</i>, login and then run the docker commands in <i>script</i>
 
 I have enclosed the complete .gitlab-ci.yml file [here](https://gitlab.com/GauravJain98/cicd)
 
-Part 2 : To be relased
+Part 2 : To be released
 
-Part 3 : To be relased
+Part 3 : To be released
 
 I also gave a talk about the same at [DSC OMG](https://www.youtube.com/watch?v=unzi3EtZysA&t=1787s)
 
-Next article would how to integrate static and dynamic testing in your CI/CD pipeline
+Next article would be how to integrate static and dynamic testing in your CI/CD pipeline
