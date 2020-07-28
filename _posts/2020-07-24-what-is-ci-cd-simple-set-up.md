@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What is CI/CD ? Simple Steps to set it up for free!"
+title:  "Part 1: What is CI/CD ? Simple Steps to set it up for free!"
 date:   2020-07-24 00:00:00 +0530
 categories: [technologies ,gitlab,cicd]
 tags: [gauravjain98,blog ,training ,interview ,cicd ,gitlab ci ,gitlab ,cicd  ,cicd pipeline ,cicd tools ,what is cicd ,azure devops cicd pipeline ,cicd jenkins ,gitlab cicd ,what is cicd pipeline ,cicd environment ,cicd process ,cicd pipelines ,aws cicd ,cicd stands for ,cicd interview questions ,jenkins cicd ,github cicd ,cicd definition ,cicd devops ,cicd pipeline tools ,cicd pipeline gitlab ,devops cicd ,cicd systems ,drone cicd ,cicd experience ,cicd meaning ,cicd pipeline jenkins ,jenkins cicd pipeline ,automation using cicd in jenkins examples ,golang cicd ,cicd development ,cicd software ,cicd tool ,cicd tutorial ,Free CICD Setup]
@@ -19,7 +19,7 @@ We will discuss what is a CI/CD pipeline and we will also show you how to set on
 
 # Why do we need CI/CD?
 
-<a target="_blank" href="https://codefresh.io/continuous-deployment/engineers-struggle-with-ci-cd-automation-to-deploy-more-often/"><img style="width:50%" src="/assets/what-is-ci-cd-simple-set-up/why-ci-cd.jpeg"></a>
+<a target="_blank" href="https://codefresh.io/continuous-deployment/engineers-struggle-with-ci-cd-automation-to-deploy-more-often/"><img style="display: block; margin-left: auto; margin-right: auto; width: 80%;" src="/assets/what-is-ci-cd-simple-set-up/why-ci-cd.jpeg"></a>
 
 This survey shows that lack of automation is what prevents us from adding new features and speed to market.
 
@@ -37,7 +37,7 @@ CI/CD has 2 parts
 
 In this stage, your code is merged and integrated. This can be done multiple times a day depending on your team's velocity.
 
-This is done using your version control services gitlab[https://gitlab.com], github[https://github.com] and more
+This is done using your version control services [gitlab(https://gitlab.com), [github](https://github.com) and more
 
 ## Continuous Deployment / Continuous Delivery
 
@@ -118,6 +118,32 @@ build:
 Here first the stage will run <span style="color:#275c8f">before_script</span>, login and then run the docker commands in <span style="color:#275c8f">script</span>
 
 I have enclosed the complete .gitlab-ci.yml file [here](https://gitlab.com/GauravJain98/cicd)
+<table style="display: block; margin-left: auto; margin-right: auto;">
+  <tr>
+    <th>
+    Part
+    </th>
+    <th>
+    Link
+    </th>
+  </tr>
+  <tr>
+    <td>
+    Part 2
+    </td>
+    <td>
+    To be relased
+    </td>
+  </tr>
+  <tr>
+    <td>
+    Part 3
+    </td>
+    <td>
+    To be relased
+    </td>
+  </tr>
+</table>
 
 I also gave a talk about the same at [DSC OMG](https://www.youtube.com/watch?v=unzi3EtZysA&t=1787s)
 
