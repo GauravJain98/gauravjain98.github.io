@@ -118,32 +118,10 @@ build:
 Here first the stage will run <span style="color:#275c8f">before_script</span>, login and then run the docker commands in <span style="color:#275c8f">script</span>
 
 I have enclosed the complete .gitlab-ci.yml file [here](https://gitlab.com/GauravJain98/cicd)
-<table style="display: block; margin-left: auto; margin-right: auto;">
-  <tr>
-    <th>
-    Part
-    </th>
-    <th>
-    Link
-    </th>
-  </tr>
-  <tr>
-    <td>
-    Part 2
-    </td>
-    <td>
-    To be relased
-    </td>
-  </tr>
-  <tr>
-    <td>
-    Part 3
-    </td>
-    <td>
-    To be relased
-    </td>
-  </tr>
-</table>
+
+Part 2 : To be relased
+
+Part 3 : To be relased
 
 I also gave a talk about the same at [DSC OMG](https://www.youtube.com/watch?v=unzi3EtZysA&t=1787s)
 
