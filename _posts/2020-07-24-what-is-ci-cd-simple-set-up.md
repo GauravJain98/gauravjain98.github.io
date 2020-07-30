@@ -17,7 +17,7 @@ We will discuss what is a CI/CD pipeline and we will also show you how to set on
 
 <i>Having some idea of docker images would be helpful</i>
 
-# Why do we need CI/CD?
+# Why do we need a CI/CD?
 
 <a target="_blank" href="https://codefresh.io/continuous-deployment/engineers-struggle-with-ci-cd-automation-to-deploy-more-often/"><img style="display: block; margin-left: auto; margin-right: auto; width: 80%;" src="/assets/what-is-ci-cd-simple-set-up/why-ci-cd.jpeg"></a>
 
@@ -31,7 +31,7 @@ The solution is having a pipeline that will check if everything in your code wor
 
 CI/CD has 2 parts
  - CI - Continuous Integration
- - CD - Continuous delivery / Continuous Delivery
+ - CD - Continuous Deployment / Continuous Delivery
 
 ## Continuous Integration
 
@@ -55,7 +55,7 @@ A good developer should do this stage locally as well before pushing it to any b
 
 Automated tests for your specific language run in this stage.
 
-This stage tests if your code is working as intended and if you follow good doing practices this will be the stage that will fail the most 
+This stage tests if your code is working as intended and if you follow good coding practices this will be the stage that will fail the most.
 
 ### Deployment
 
@@ -63,7 +63,7 @@ This is pushing your code to your deployment. We will use Kubernetes in this exa
 
 For every new push, the whole pipeline runs from the start again.
 
-If any stage fails it pipeline fails
+If any stage fail's it will fail pipeline
 
 For each integration, the pipeline runs from the start
 
@@ -119,9 +119,9 @@ Here first the stage will run <i>before_script</i>, login and then run the docke
 
 I have enclosed the complete .gitlab-ci.yml file [here](https://gitlab.com/GauravJain98/cicd)
 
-Part 2 : To be released
+Part 2: To be released
 
-Part 3 : To be released
+Part 3: To be released
 
 I also gave a talk about the same at [DSC OMG](https://www.youtube.com/watch?v=unzi3EtZysA&t=1787s)
 
