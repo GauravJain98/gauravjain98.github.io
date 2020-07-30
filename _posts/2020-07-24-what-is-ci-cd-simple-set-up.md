@@ -8,7 +8,6 @@ author: "Gaurav Jain"
 ---
 
 # Introduction 
-
 CI/CD is a term that confuses a lot of beginners when they hear about the software deployment process.
 
 A new developer will sometimes find that when they pushed code to production, the CI/CD pipeline stopped it in its track from wreaking havoc for the users but have no clue how it was able to do so.
@@ -18,33 +17,32 @@ We will discuss what is a CI/CD pipeline and we will also show you how to set on
 <i>Having some idea of docker images would be helpful</i>
 
 # Why do we need a CI/CD?
-
 <a target="_blank" href="https://codefresh.io/continuous-deployment/engineers-struggle-with-ci-cd-automation-to-deploy-more-often/"><img style="display: block; margin-left: auto; margin-right: auto; width: 80%;" src="/assets/what-is-ci-cd-simple-set-up/why-ci-cd.jpeg"></a>
 
 This survey shows that lack of automation is what prevents us from adding new features and speed to market.
 
-As a Software developer, we can easily right multiple features fast. But we can not guaranty that our code works perfectly especially when we working in a team it could be that someone's code breaks our code.
+As a Software developer, we can easily write multiple features fast. But we can not guaranty that our code works perfectly especially when we working in a team it could be that someone's code breaks our code.
 
 The solution is having a pipeline that will check if everything in your code works without anything breaking. If everything works then deploy the code to production.
 
-# What is a CI/CD?
+If we break it down to the basics it just a program which we configure using a configuration file and then a function in on the CI/CD server will take your code as input and do the steps that are configured in your configuration file.
 
+So, putting it in simple words, CI/CD is a powerful tool as it makes sure that bad code does not get merged into production and we help us to know the status of that particular code.
+
+# What is a CI/CD?
 CI/CD has 2 parts
  - CI - Continuous Integration
  - CD - Continuous Deployment / Continuous Delivery
 
 ## Continuous Integration
-
 In this stage, your code is merged and integrated. This can be done multiple times a day depending on your team's velocity.
 
 This is done using your version control services [gitlab](https://gitlab.com), [github](https://github.com) and more
 
 ## Continuous Deployment / Continuous Delivery
-
 Here the pipeline does the major magic 
 
 ### Build
-
 This mostly just checks if there are syntax errors or any simple errors.
 This step is also known as a sanity check stage.
 
@@ -52,13 +50,11 @@ Docker build is one of the most common ways to perform this.
 A good developer should do this stage locally as well before pushing it to any branch as good practice.
 
 ### Tests
-
 Automated tests for your specific language run in this stage.
 
 This stage tests if your code is working as intended and if you follow good coding practices this will be the stage that will fail the most.
 
 ### Deployment
-
 This is pushing your code to your deployment. We will use Kubernetes in this example
 
 For every new push, the whole pipeline runs from the start again.
@@ -68,7 +64,6 @@ If any stage fail's it will fail pipeline
 For each integration, the pipeline runs from the start
 
 # Let us set it up!!
-
 We will use the free CI/CD provided by [Gitlab](gitlab.com)
 
 For your CI/CD pipeline to work all you require is to add a .gitlab-ci.yml file. Gitlab will use this file to configure its gitlab-runner.
@@ -87,7 +82,6 @@ stages:
 This is one of the first things you will have in your file (if you look at my file the other thing are the variables to run docker in docker)
 
 ## Configuring 
-
 Each job starts as a clean install of your base docker container. The base image will be the docker images that is base of your project example python:3, node:latest, ruby:2.5, etc
 
 The main point of having a base image is so you can install the requirements either having them in your base image or installing them in your container so you can run your script
@@ -95,7 +89,6 @@ The main point of having a base image is so you can install the requirements eit
 Once you have your base image you install the requirements and your authentication in your before-script
 
 ## What actually happens
-
 when you push your code with a .gitlab-ci.yml file [Gitlab](gitlab.com) gives the task for one of it’s shared runner. They are free and they run the pipeline.
 
 Once everything required to run your job is installed in your shared runner, it will run your script.
