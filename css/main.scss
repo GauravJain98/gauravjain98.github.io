@@ -76,7 +76,7 @@
 }
 body{
   background-color: #022335 !important;
-  font-family: "Fira Mono" !important;
+  font-family: "Inter" !important;
   color: #abc0ca !important;
 }
 .page-stuff{
@@ -115,7 +115,7 @@ a:hover{
 
 .post-list{
 
-    text-align: center;
+    text-align: left;
 
 }
 .post-box{
@@ -139,7 +139,6 @@ padding-bottom: 0.3em;
 }
 .post-content{
   font-size: 19px;
-  text-align: justify;
   padding-bottom: 5em;
 }
 pre{
