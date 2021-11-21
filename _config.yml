@@ -10,17 +10,17 @@ title: Gaurav Jain
 email: gauravcdj.98@gmail.com
 
 #write html inside the double quotes to display in jumbotron
-description: "<h3>Hello, World! I am </h3><h1>Everything but looks</h1><h3>I'll implement your vision</h3>and keep you on your toes ;)"
-
-
+description: "<h3>Hello, World! I am </h3>
+              <h1>Gaurav Jain</h1>
+              <h3>I will build systems to implement your vision</h3>
+              and keep you on your toes ;)"
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://gauravjain98.io" # the base hostname & protocol for your site
+url: "https://gauravjain98.github.io" # the base hostname & protocol for your site
 twitter_username: gaurav_jain98
 github_username:  GauravJain98
 medium_username:  crazcuber
 linkedin_username: gauravjain98
-facebook_username: gauravj2011
 instagram_username: cuber_dude
 
 tags: [GauravJain98,web,college,blog,blogger,implement,devOps,Python,Django,AWS,GCP,cloud,AZURE,cuberDude,CuberDude,jekyll,developer,designer,freelancer,Data Structure, Algoriithms, coding,software,developer]
